@@ -1,0 +1,267 @@
+/* =========================
+   GASYTECH – BRANDING CSS COMBINÉ
+   ========================= */
+
+/* Variables globales */
+:root {
+  --gyt-red: #e10600;
+  --gyt-red-hover: #ff3b3b;
+  --gyt-dark: #111111;
+  --gyt-gray: #222222;
+  --gyt-white: #ffffff;
+  --gyt-light: #f5f5f5;
+  --radius: 12px;
+  --transition: 0.3s ease;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--gyt-dark);
+  color: var(--gyt-white);
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER – Logo fidèle
+   ========================= */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5; /* fond clair pour logo coloré */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+section {
+  padding: 70px 10%;
+  text-align: center;
+  background-color: var(--gyt-dark);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: var(--gyt-red);
+  margin-bottom: 20px;
+}
+
+section p, section ul {
+  font-size: 1.1rem;
+  color: var(--gyt-light);
+}
+
+section ul {
+  list-style: disc;
+  padding-left: 20px;
+  display: inline-block;
+  text-align: left;
+}
+
+/* =========================
+   SERVICES – Cards
+   ========================= */
+#services ul li {
+  background: var(--gyt-gray);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+#services ul li:hover {
+  transform: translateY(-5px);
+  background-color: var(--gyt-red-hover);
+  cursor: pointer;
+}
+
+/* =========================
+   BRANDING CARDS (optionnel)
+   ========================= */
+.branding-cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.brand-card {
+  background: var(--gyt-gray);
+  padding: 25px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-left: 4px solid var(--gyt-red);
+}
+
+.brand-card:hover {
+  transform: translateY(-6px);
+  background: #333;
+}
+
+.brand-card h3 {
+  margin-bottom: 10px;
+  color: var(--gyt-white);
+  font-size: 1.2rem;
+}
+
+.brand-card span {
+  font-size: 0.9rem;
+  color: var(--gyt-light);
+}
+
+/* =========================
+   CODE BOX (optionnel)
+   ========================= */
+.code-box {
+  margin-top: 60px;
+  background: #0b0b0b;
+  border-radius: var(--radius);
+  padding: 20px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #00ffcc;
+  overflow-x: auto;
+  border: 1px solid #222;
+}
+
+.code-box span {
+  color: var(--gyt-red);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+/* =========================
+   FOOTER – GASYTECH
+   ========================= */
+.footer {
+    background: linear-gradient(135deg, #000000, #292525); /* foncé et moderne */
+    color: #ffffff;
+    padding: 60px 40px 20px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: inherit;
+    border-radius: 100% 100% 0 0;
+    z-index: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 400px;
+    line-height: 1.4;
+    color: #fdfafa; 
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.footer-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e10600; 
+}
+
+.social svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+    transition: transform 0.2s ease, fill 0.3s ease;
+}
+
+.social:hover svg {
+    transform: scale(1.2);
+    fill: #e10600;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* =========================
+   RESPONSIVE FOOTER
+   ========================= */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+    
+    .brand {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+  }
+  
+  section p, section ul {
+    font-size: 1rem;
+  }
+  
+  header img {
+    width: 120px;
+  }
+}
