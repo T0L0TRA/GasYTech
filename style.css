@@ -1,267 +1,169 @@
-/* =========================
-   GASYTECH – BRANDING CSS COMBINÉ
+/* =========================/* =========================
+   GASYTECH – STYLE GLOBAL
    ========================= */
 
-/* Variables globales */
+/* Variables branding */
 :root {
-  --gyt-red: #e10600;
-  --gyt-red-hover: #ff3b3b;
-  --gyt-dark: #111111;
-  --gyt-gray: #222222;
-  --gyt-white: #ffffff;
-  --gyt-light: #f5f5f5;
+  --red: #e10600;
+  --dark: #111111;
+  --dark-2: #1e1e1e;
+  --gray: #2a2a2a;
+  --light: #f5f5f5;
+  --white: #ffffff;
   --radius: 12px;
   --transition: 0.3s ease;
-  --font-main: 'Poppins', sans-serif;
+  --font: "Poppins", Arial, sans-serif;
 }
 
-/* Reset basique */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
-  font-family: var(--font-main);
-  background-color: var(--gyt-dark);
-  color: var(--gyt-white);
-  line-height: 1.6;
+  font-family: var(--font);
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.7;
 }
 
 /* =========================
-   HEADER – Logo fidèle
+   HEADER
    ========================= */
 header {
+  background: #f5f5f5; /* fond clair pour logo fidèle */
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f5f5f5; /* fond clair pour logo coloré */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 60px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 header img {
-  width: 150px;
+  width: 160px;
   height: auto;
   margin-bottom: 15px;
-  border-radius: 8px;
 }
 
+header h1 {
+  font-size: 2.8rem;
+  color: var(--red);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 5px;
+}
 
 /* =========================
    SECTIONS
    ========================= */
 section {
-  padding: 70px 10%;
-  text-align: center;
-  background-color: var(--gyt-dark);
+  padding: 80px 12%;
 }
 
 section h2 {
   font-size: 2.2rem;
-  color: var(--gyt-red);
-  margin-bottom: 20px;
+  color: var(--red);
+  margin-bottom: 25px;
+  text-align: center;
 }
 
-section p, section ul {
-  font-size: 1.1rem;
-  color: var(--gyt-light);
+section p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  color: var(--light);
 }
 
 section ul {
-  list-style: disc;
+  margin-top: 15px;
   padding-left: 20px;
-  display: inline-block;
-  text-align: left;
+}
+
+section ul li {
+  margin-bottom: 10px;
 }
 
 /* =========================
-   SERVICES – Cards
+   SERVICES
    ========================= */
+#services ul {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 #services ul li {
-  background: var(--gyt-gray);
+  background: var(--dark-2);
   padding: 15px 20px;
-  margin-bottom: 15px;
   border-radius: var(--radius);
+  margin-bottom: 15px;
   transition: var(--transition);
 }
 
 #services ul li:hover {
-  transform: translateY(-5px);
-  background-color: var(--gyt-red-hover);
-  cursor: pointer;
-}
-
-/* =========================
-   BRANDING CARDS (optionnel)
-   ========================= */
-.branding-cards {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-}
-
-.brand-card {
-  background: var(--gyt-gray);
-  padding: 25px;
-  border-radius: var(--radius);
-  transition: var(--transition);
-  border-left: 4px solid var(--gyt-red);
-}
-
-.brand-card:hover {
-  transform: translateY(-6px);
-  background: #333;
-}
-
-.brand-card h3 {
-  margin-bottom: 10px;
-  color: var(--gyt-white);
-  font-size: 1.2rem;
-}
-
-.brand-card span {
-  font-size: 0.9rem;
-  color: var(--gyt-light);
-}
-
-/* =========================
-   CODE BOX (optionnel)
-   ========================= */
-.code-box {
-  margin-top: 60px;
-  background: #0b0b0b;
-  border-radius: var(--radius);
-  padding: 20px;
-  font-family: monospace;
-  font-size: 0.9rem;
-  color: #00ffcc;
-  overflow-x: auto;
-  border: 1px solid #222;
-}
-
-.code-box span {
-  color: var(--gyt-red);
+  background: var(--red);
+  transform: translateY(-4px);
 }
 
 /* =========================
    FOOTER
    ========================= */
-/* =========================
-   FOOTER – GASYTECH
-   ========================= */
-.footer {
-    background: linear-gradient(135deg, #000000, #292525); /* foncé et moderne */
-    color: #ffffff;
-    padding: 60px 40px 20px;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+footer {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 80px;
 }
 
-.footer::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: inherit;
-    border-radius: 100% 100% 0 0;
-    z-index: 0;
+footer p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    position: relative;
-    z-index: 1;
+footer nav {
+  margin-bottom: 25px;
 }
 
-.brand {
-    font-size: 20px;
-    font-weight: bold;
-    max-width: 400px;
-    line-height: 1.4;
-    color: #fdfafa; 
+footer nav a {
+  color: var(--light);
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
 }
 
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    font-size: 16px;
+footer nav a:hover {
+  color: var(--red);
 }
 
-.footer-links a {
-    color: #f5f5f5;
-    text-decoration: none;
-    transition: color 0.3s ease;
+footer a {
+  color: var(--red);
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.footer-links a:hover {
-    color: #e10600; 
+footer a:hover {
+  text-decoration: underline;
 }
-
-.social svg {
-    width: 24px;
-    height: 24px;
-    fill: #ffffff;
-    transition: transform 0.2s ease, fill 0.3s ease;
-}
-
-.social:hover svg {
-    transform: scale(1.2);
-    fill: #e10600;
-}
-
-.footer-bottom {
-    margin-top: 40px;
-    font-size: 12px;
-    opacity: 0.8;
-    text-align: center;
-}
-
-/* =========================
-   RESPONSIVE FOOTER
-   ========================= */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-links {
-        justify-content: center;
-    }
-    
-    .brand {
-        max-width: 100%;
-    }
-}
-
 
 /* =========================
    RESPONSIVE
    ========================= */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
-  
-  section h2 {
-    font-size: 1.8rem;
+
+  section {
+    padding: 60px 8%;
   }
-  
-  section p, section ul {
-    font-size: 1rem;
-  }
-  
+
   header img {
-    width: 120px;
+    width: 130px;
   }
 }
+
+
