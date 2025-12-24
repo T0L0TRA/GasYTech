@@ -85,25 +85,6 @@ body {
 /* =========================
    HERO
 ========================= */
-header#accueil {
-  padding: 120px 20px;
-  text-align: center;
-  background:
-    radial-gradient(circle at top, #001a33, transparent 60%),
-    linear-gradient(135deg, #000000, #020617);
-}
-
-header h1 {
-  font-size: 3.4rem;
-  margin-bottom: 14px;
-  color: #ffffff;
-}
-
-header p {
-  font-size: 1.3rem;
-  color: var(--primary);
-}
-
 /* =========================
    SECTIONS
 ========================= */
@@ -187,5 +168,6 @@ footer {
 footer p {
   margin-bottom: 10px;
 }
+
 
 
